@@ -19,7 +19,7 @@ def bisection(a, b, f):
     text_file = open('output.txt', 'w')
     while math.fabs(f(x)) >= e:
         count += 1
-        s = ('%f iteration, f(x) = %f, x = %f, a = %f, b = %f\n' % (count, f(x), x, a, b))
+        s = ('%d iteration, f(x) = %f, x = %f, a = %f, b = %f\n' % (count, f(x), x, a, b))
         text_file.write(s)
         x = (a + b) / 2
         a, b = (a, x) if f(a) * f(x) < 0 else (x, b)
