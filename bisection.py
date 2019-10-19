@@ -2,7 +2,7 @@ import math
 import pylab
 import numpy
 
-func_glob =  lambda x: x ** 3 - x
+func_glob = lambda x: x ** 3 - x
 
 a1, b1 = 0, 1.0
 
@@ -24,7 +24,7 @@ def bisection(a, b, f):
         x = (a + b) / 2
         a, b = (a, x) if f(a) * f(x) < 0 else (x, b)
     text_file.write('Iterations: %d\n' % count)
-    text_file.write('Result: %f\n' % ((a + b)/2))
+    text_file.write('Result: %f\n' % ((a + b) / 2))
     text_file.close()
     return (a + b) / 2
 
@@ -34,4 +34,4 @@ pylab.plot([x for x in X], [func_glob(x) for x in X])
 pylab.grid(True)
 # pylab.show()
 
-print ('Приближенное значение уравнения: %s' % bisection(a1, b1, func_glob))
+print('Приближенное значение уравнения: %s' % bisection(a1, b1, func_glob))
