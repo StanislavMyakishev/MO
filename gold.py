@@ -17,7 +17,7 @@ def gold(e, a, b):
     f2 = func(x2)
 
     def next(i, e, a, b, x1, x2, f1, f2, file):
-        file.write("Iteration " + str(i) + ":\nx1 = " + str(x1) + "; x2 = " + str(x2) + ";\nf1 = " + str(f1) + "; f2 = " + str(f2) + ";\n\n")
+        file.write("Iteration " + str(i) + ":\nx1 = " + str(x1) + "; x2 = " + str(x2) + ";\na = " + str(a) + "; b = " + str(b) + ";\n\n")
         i += 1
         if (f1 < f2):
             b = x2
@@ -36,7 +36,7 @@ def gold(e, a, b):
             print(x1, x2)
 
         if (abs(b - a) < e):
-            file.write("Iteration " + str(i) + ":\nx1 = " + str(x1) + "; x2 = " + str(x2) + ";\nf1 = " + str(f1) + "; f2 = " + str(f2) + ";\n\n")
+            file.write("Iteration " + str(i) + ":\nx1 = " + str(x1) + "; x2 = " + str(x2) + ";\na = " + str(a) + "; b = " + str(b) + ";\n\n")
             answer = (x1 + x2) / 2
             file.write("\nANSWER: " + str(answer))
             file.close()
