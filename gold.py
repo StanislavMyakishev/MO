@@ -37,7 +37,7 @@ def gold(e, a, b):
 
         if (abs(b - a) < e):
             file.write("Iteration " + str(i) + ":\nx1 = " + str(x1) + "; x2 = " + str(x2) + ";\na = " + str(a) + "; b = " + str(b) + ";\n\n")
-            answer = (x1 + x2) / 2
+            answer = (a + b) / 2
             file.write("\nANSWER: " + str(answer))
             file.close()
             return answer
@@ -46,5 +46,5 @@ def gold(e, a, b):
 
     return next(i, e, a, b, x1, x2, f1, f2, file)
     
-print(gold(0.0001, 0, 1))
+print(gold(0.01, 0, 1))
 
