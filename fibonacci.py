@@ -10,7 +10,7 @@ def toFixed(numObj, digits=0):
 
 
 def fibonacci(e, a, b):
-    text_file = open('fib.txt', 'w')
+    text_file = open('../output/fib.txt', 'w')
     F = list()  # список наши Fn , Fn+1 , Fn+2
     text_file.write('((b-a)/e)=')
     r = (b - a) / e

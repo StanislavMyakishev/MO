@@ -3,12 +3,11 @@ import math
 a1, b1 = 0, 1.0
 e = 0.0001
 
-
 func_glob = lambda x: x ** 3 - x
 
 
 def bisection(a, b, f):
-    text_file = open('bis.txt', 'w')
+    text_file = open('../output/bis.txt', 'w')
     count = 0
     while b - a >= e:
         x = (a + b) / 2

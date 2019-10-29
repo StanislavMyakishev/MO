@@ -2,7 +2,7 @@ import math
 
 
 def gold(e, a, b):
-    file = open('gold.txt', 'w')
+    file = open('../output/gold.txt', 'w')
     i = 1
     a = 0
     b = 1
