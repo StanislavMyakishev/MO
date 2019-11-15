@@ -260,7 +260,6 @@ def obj(table,eq):
             row[i] = eq[i]*-1
             i +=1
         row[-2] = 1
-        row[-1] = eq[-1]
     else:
         print('You must finish adding constraints before the objective function can be added.')
 
@@ -303,8 +302,10 @@ def minz(table, output='summary'):
 
     while next_round_r(table)==True:
         table = pivot(loc_piv_r(table)[0],loc_piv_r(table)[1],table)
+        print(table)
     while next_round(table)==True:
         table = pivot(loc_piv(table)[0],loc_piv(table)[1],table)
+        print(table)
 
     lc = len(table[0,:])
     lr = len(table[:,0])
